@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+sudo: required
+before_install:
+  - ./install_deps.sh
+branches:
+  only:
+    - master
+after_success:
+  - ./upload_via_ftp.sh
